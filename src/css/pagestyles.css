@@ -80,8 +80,6 @@ li {
 
 .loader {
     margin: auto;
-    width: 48px;
-    height: 48px;
     position: relative;
     perspective: 500px;
 }
@@ -95,10 +93,10 @@ li {
     content: "";
     position: absolute;
     right: 0;
-    top: 0;
+    top: 16px;
     width: 24px;
     height: 48px;
-    background: #FF3D00;
+    background: #4479da;
     border-radius: 0 24px 24px 0;
     transform-origin: 0 0;
     animation: flip 2s linear infinite alternate;
@@ -127,7 +125,8 @@ li {
 .load-more-btn {
     display: block;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 80px;
+    margin-bottom: 40px;
     width: 120px;
     height: 48px;
     text-align: center;
@@ -139,6 +138,10 @@ li {
     color: #fff;
     border: none;
     border-radius: 8px;
+}
+
+.is-hidden {
+    display: none;
 }
 
 /*Image card*/

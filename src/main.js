@@ -24,7 +24,7 @@ let searchedEl = '';
 let perPage = 15;
 
 loader.classList.add('hidden');
-loadMoreBtn.classList.remove('hidden');
+loadMoreBtn.classList.add('is-hidden');
 
 const onSearchFormSubmit = async event => {
   try {
@@ -71,10 +71,10 @@ const onSearchFormSubmit = async event => {
       }
       
   if (data.totalHits > perPage) {
-      loadMoreBtn.classList.remove('hidden');
+      loadMoreBtn.classList.remove('is-hidden');
       loadMoreBtn.addEventListener('click', onLoadMoreBtnClick);
     } else {
-      loadMoreBtn.classList.add('hidden');
+      loadMoreBtn.classList.add('is-hidden');
     }
 
     
@@ -115,7 +115,7 @@ const onLoadMoreBtnClick = async () => {
 
   
     if (page * perPage >= data.totalHits) {
-      loadMoreBtn.classList.add('hidden');
+      loadMoreBtn.classList.add('is-hidden');
       iziToast.show({
         title: '',
         message: "We're sorry, but you've reached the end of search results.",
